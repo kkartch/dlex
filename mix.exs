@@ -28,15 +28,16 @@ defmodule Dlex.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:db_connection, "~> 2.1"},
-      {:grpc, "~> 0.3.1"},
-      {:jason, "~> 1.0", optional: true},
-      {:mint, "~> 1.0", optional: true},
-      {:castore, "~> 0.1.4", optional: true},
-      {:ecto, "~> 3.1", optional: true},
+      {:db_connection, "~> 2.6"},
+      {:grpc, "~> 0.7"},
+      {:protobuf, "~> 0.11"},
+      {:jason, "~> 1.4.1", optional: true},
+      {:mint, "~> 1.5.2", optional: true},
+      {:castore, "~> 1.0.5", optional: true},
+      {:ecto, "~> 3.11.2", optional: true},
       {:earmark, "~> 1.4", only: :dev},
-      {:exrun, "~> 0.1.0", only: :dev},
-      {:ex_doc, "~> 0.19", only: :dev}
+      {:exrun, "~> 0.2.1", only: :dev},
+      {:ex_doc, "~> 0.31.2", only: :dev},
     ]
   end
 

@@ -49,7 +49,6 @@ defmodule Dlex.Protocol do
     {:ok, state}
   end
 
-  @impl true
   def checkin(state) do
     {:ok, state}
   end
@@ -63,7 +62,7 @@ defmodule Dlex.Protocol do
 
   @impl true
   def handle_begin(_opts, state) do
-    {:ok, nil, %{state | txn_context: TxnContext.new(), txn_aborted?: false}}
+    {:ok, nil, %{state | txn_context: %TxnContext{}, txn_aborted?: false}}
   end
 
   @impl true

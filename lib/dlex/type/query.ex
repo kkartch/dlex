@@ -16,12 +16,12 @@ defmodule Dlex.Type.Query do
 
   @impl true
   def encode(%Query{statement: statement}, vars, opts) do
-    Request.new(
+    %Request{
       query: statement,
       vars: Utils.encode_vars(vars),
       read_only: Keyword.get(opts, :read_only, false),
       best_effort: Keyword.get(opts, :best_effort, false)
-    )
+    }
   end
 
   @impl true
